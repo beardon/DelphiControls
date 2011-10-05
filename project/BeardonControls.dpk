@@ -35,6 +35,7 @@ requires
 
 contains
   CleanRadioGroup in 'lib\com\beardon\clean_radio_group\CleanRadioGroup.pas',
-  CurrencyEdit in 'lib\com\beardon\currency_edit\CurrencyEdit.pas';
+  CurrencyEdit in 'lib\com\beardon\currency_edit\CurrencyEdit.pas',
+  NumEdit in 'lib\com\beardon\num_edit\NumEdit.pas';
 
 end.
