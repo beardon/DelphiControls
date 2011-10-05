@@ -34,8 +34,9 @@ requires
   vclimg;
 
 contains
-  CleanRadioGroup in 'lib\com\beardon\clean_radio_group\CleanRadioGroup.pas',
-  CurrencyEdit in 'lib\com\beardon\currency_edit\CurrencyEdit.pas',
-  NumEdit in 'lib\com\beardon\num_edit\NumEdit.pas';
+  CleanRadioGroup in 'lib\com\beardon\CleanRadioGroup.pas',
+  CurrencyEdit in 'lib\com\beardon\CurrencyEdit.pas',
+  NumEdit in 'lib\com\beardon\NumEdit.pas',
+  WrapStringGrid in 'lib\com\beardon\WrapStringGrid.pas';
 
 end.

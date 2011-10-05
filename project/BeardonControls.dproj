@@ -66,9 +66,10 @@
 			<DCCReference Include="vclx.dcp"/>
 			<DCCReference Include="xmlrtl.dcp"/>
 			<DCCReference Include="vclimg.dcp"/>
-			<DCCReference Include="lib\com\beardon\clean_radio_group\CleanRadioGroup.pas"/>
-			<DCCReference Include="lib\com\beardon\currency_edit\CurrencyEdit.pas"/>
-			<DCCReference Include="lib\com\beardon\num_edit\NumEdit.pas"/>
+			<DCCReference Include="lib\com\beardon\CleanRadioGroup.pas"/>
+			<DCCReference Include="lib\com\beardon\CurrencyEdit.pas"/>
+			<DCCReference Include="lib\com\beardon\NumEdit.pas"/>
+			<DCCReference Include="lib\com\beardon\WrapStringGrid.pas"/>
 			<RcItem Include="resources\currency.bmp">
 				<ResourceType>BITMAP</ResourceType>
 				<ResourceId>CurrencyBMP</ResourceId>
