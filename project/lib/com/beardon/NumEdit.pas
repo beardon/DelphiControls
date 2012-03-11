@@ -239,7 +239,7 @@ end;
 
 procedure TIntEdit.KeyPress(var Key: Char);
 begin
-  if not ( Key in ['+', '-', '0'..'9', #8,#13] ) then
+  if not CharInSet(Key, ['+', '-', '0'..'9', #8,#13]) then
   begin
     Key := #0;
     MessageBeep(MB_ICONEXCLAMATION);
@@ -276,8 +276,8 @@ end;
 
 procedure TFloatEdit.KeyPress(var Key: Char);
 begin
-  if not (Key in ['+', '-', DecimalSeparator, '0'..'9', #0..#31] )
-    or ((key = decimalseparator) and (pos(decimalseparator,text)>0))
+  if not CharInSet(Key, ['+', '-', FormatSettings.DecimalSeparator, '0'..'9', #0..#31])
+    or ((key = FormatSettings.DecimalSeparator) and (pos(FormatSettings.DecimalSeparator,text)>0))
   then
   begin
     Key := #0;
@@ -291,7 +291,7 @@ end;
 constructor TMoneyEdit.create(Aowner:TComponent);
 begin
   inherited;
-  text:='0.0';
+  text:='0.00';
   width:=33;
   FormatStr := '###0.00';
 end;
@@ -325,22 +325,22 @@ const
    GoodKeys  = ['-','0'..'9'];
 var
    OK     : boolean;
-   valids : set of char;
+   valids : TSysCharSet;
    place  : integer;
 begin
-   if not (key in EditKeys) then
+   if not CharInSet(key, EditKeys) then
    begin
       { Only allow 1 DecimalSeparator }
-      place := pos(DecimalSeparator,text);
+      place := pos(FormatSettings.DecimalSeparator,text);
       if (place > 0) then
          valids := GoodKeys
       else
-         valids := GoodKeys + [DecimalSeparator];
+         valids := GoodKeys + [FormatSettings.DecimalSeparator];
 
-      OK := (Key in valids);
+      OK := CharInSet(Key, valids);
       if (OK) then
       begin
-         if (key = DecimalSeparator) then
+         if (key = FormatSettings.DecimalSeparator) then
          begin
             ok := (SelStart >= (length(text) - 2));
          end

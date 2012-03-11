@@ -31,11 +31,12 @@ requires
   vclactnband,
   vclx,
   xmlrtl,
-  vclimg;
+  vclimg,
+  vcldb,
+  dbrtl;
 
 contains
   CleanRadioGroup in 'lib\com\beardon\CleanRadioGroup.pas',
-  CurrencyEdit in 'lib\com\beardon\CurrencyEdit.pas',
   NumEdit in 'lib\com\beardon\NumEdit.pas',
   WrapStringGrid in 'lib\com\beardon\WrapStringGrid.pas';
 
