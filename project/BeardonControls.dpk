@@ -1,20 +1,21 @@
 package BeardonControls;
 
 {$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
 {$ALIGN 8}
 {$ASSERTIONS ON}
 {$BOOLEVAL OFF}
-{$DEBUGINFO ON}
+{$DEBUGINFO OFF}
 {$EXTENDEDSYNTAX ON}
 {$IMPORTEDDATA ON}
 {$IOCHECKS ON}
-{$LOCALSYMBOLS ON}
+{$LOCALSYMBOLS OFF}
 {$LONGSTRINGS ON}
 {$OPENSTRINGS ON}
 {$OPTIMIZATION ON}
 {$OVERFLOWCHECKS OFF}
 {$RANGECHECKS OFF}
-{$REFERENCEINFO ON}
+{$REFERENCEINFO OFF}
 {$SAFEDIVIDE OFF}
 {$STACKFRAMES OFF}
 {$TYPEDADDRESS OFF}
@@ -22,22 +23,18 @@ package BeardonControls;
 {$WRITEABLECONST OFF}
 {$MINENUMSIZE 1}
 {$IMAGEBASE $400000}
+{$DEFINE RELEASE}
+{$ENDIF IMPLICITBUILDING}
 {$IMPLICITBUILD ON}
 
 requires
   rtl,
-  designide,
-  vcl,
-  vclactnband,
-  vclx,
-  xmlrtl,
-  vclimg,
-  vcldb,
-  dbrtl;
+  vcl;
 
 contains
-  CleanRadioGroup in 'lib\com\beardon\CleanRadioGroup.pas',
-  NumEdit in 'lib\com\beardon\NumEdit.pas',
-  WrapStringGrid in 'lib\com\beardon\WrapStringGrid.pas';
+  CleanRadioGroup in 'lib\com\beardon\controls\CleanRadioGroup.pas',
+  NumEdit in 'lib\com\beardon\controls\NumEdit.pas',
+  ButtonedAutocompleteEdit in 'lib\com\beardon\controls\ButtonedAutocompleteEdit.pas',
+  AutocompleteManager in 'lib\com\beardon\classes\AutocompleteManager.pas';
 
 end.
