@@ -40,11 +40,11 @@
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <DCC_Namespace>Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;System;Xml;Data;Datasnap;Web;Soap;Winapi;$(DCC_Namespace)</DCC_Namespace>
         <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
-        <DCC_BplOutput>..\output\DelphiXE4\release</DCC_BplOutput>
+        <DCC_BplOutput>..\output\$(ProductVersion)\$(Config)\</DCC_BplOutput>
         <DCC_DcpOutput>$(BDSCOMMONDIR)\Dcp</DCC_DcpOutput>
         <DCC_ImageBase>00400000</DCC_ImageBase>
         <GenPackage>true</GenPackage>
-        <DCC_DcuOutput>..\dcu\DelphiXE4\release</DCC_DcuOutput>
+        <DCC_DcuOutput>..\dcu\$(ProductVersion)\$(Config)\</DCC_DcuOutput>
         <DCC_CBuilderOutput>All</DCC_CBuilderOutput>
         <DCC_UnitSearchPath>F:\FSTdb\components;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
         <DCC_E>false</DCC_E>
@@ -56,14 +56,12 @@
         <DCC_N>false</DCC_N>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
-        <DCC_UsePackage>vcl;rtl;vclimg;xmlrtl;vclactnband;vclx;dbrtl;vcldb;$(DCC_UsePackage)</DCC_UsePackage>
+        <DCC_UsePackage>vcl;rtl;$(DCC_UsePackage)</DCC_UsePackage>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win64)'!=''">
-        <DCC_UsePackage>vcl;rtl;vclimg;xmlrtl;vclactnband;vclx;dbrtl;vcldb;$(DCC_UsePackage)</DCC_UsePackage>
+        <DCC_UsePackage>vcl;rtl;$(DCC_UsePackage)</DCC_UsePackage>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1)'!=''">
-        <DCC_BplOutput>..\output\DelphiXE4\debug</DCC_BplOutput>
-        <DCC_DcuOutput>..\dcu\DelphiXE4\debug</DCC_DcuOutput>
         <DCC_DcpOutput>$(BDSCOMMONDIR)\Dcp</DCC_DcpOutput>
         <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
         <DCC_Optimize>false</DCC_Optimize>
