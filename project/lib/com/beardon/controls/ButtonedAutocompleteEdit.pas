@@ -81,7 +81,7 @@ type
 
   TACSource = (acsList, acsHistory, acsMRU, acsShell);
 
-
+  { adapted from http://stackoverflow.com/questions/5465590/auto-append-complete-from-text-file-to-an-edit-box-delphi}
   TButtonedAutocompleteEdit = class(Vcl.ExtCtrls.TButtonedEdit)
   private
     FACList: TEnumString;
